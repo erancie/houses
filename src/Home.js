@@ -24,21 +24,11 @@ export default function Home() {
    console.log(state)
  }, [handleChange])
 
-
-
  const handleSubmit = (e) => {
   e.preventDefault()
-  // fetch('/http://localhost:8080/')
-  // .then(response=> response.json() )
-  // .then((data) => {
-  //   console.log(data)
-  // })
-  // .catch(err => console.log(err))
-  //  //axios post request
-  axios.get('http://localhost:8080/')
-  .then(res=>console.log(res), (err)=>console.log(err))
-
-  //  console.log('submitted')
+  // axios.get('/test') // built route to server
+  axios.get('http://localhost:8080/test') // dev route to server
+  .then(res=>console.log(res), err=>console.log(err))
  }
 
   return (
